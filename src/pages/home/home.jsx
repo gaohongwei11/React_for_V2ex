@@ -1,5 +1,9 @@
 import React from 'react'
 import API from '@/api/api';
+import { connect } from 'react-redux';
+import { saveList, clearData } from '@/store/home/action';
+// import PropTypes from 'prop-types';
+import './home.scss';
 
 class Home extends React.Component {
   // constructor(props) {
@@ -9,6 +13,9 @@ class Home extends React.Component {
   //     comments: [],
   //     date: new Date().toString()
   //   };
+  // }
+  // static propTypes = {
+  //   list: PropTypes.array.isRequired,
   // }
   state = {
     count: 999
@@ -22,6 +29,8 @@ class Home extends React.Component {
   getHot = async () => {
     let result = await API.getHot({t: 123456});
     console.log(result)
+    this.props.saveList(result);
+    console.log(this)
   }
   goList = () => {
     this.props.history.push({
@@ -37,9 +46,18 @@ class Home extends React.Component {
 
   render() {
     return (
-    <div onClick={this.goList}>Home-{this.state.count}</div>
+    <div className="home-container" onClick={this.goList}>
+      <div className="test">Home-{this.state.count}</div>
+      <div className="box">123</div>
+    </div>
     )
   }
 }
 
-export default Home
+export default connect(state => (
+  {
+  list: state
+}), {
+  saveList, 
+  clearData,
+})(Home);

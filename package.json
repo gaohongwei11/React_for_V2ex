@@ -2,8 +2,26 @@
   "name": "v2ex",
   "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "react-router-dom": "^5.2.0"
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cssnano": "^4.1.10",
+    "fastclick": "^1.0.6",
+    "immutable": "^4.0.0-rc.12",
+    "node-sass": "^4.14.1",
+    "postcss-aspect-ratio-mini": "^1.1.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-viewport-units": "^0.1.6",
+    "postcss-write-svg": "^3.0.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "viewport-units-buggyfill": "^0.6.2"
   },
   "scripts": {
     "start": "node scripts/start.js",
@@ -13,18 +31,14 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "browserslist": [
+    "iOS >= 7",
+    "Android >= 4.1",
+    ">1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not ie < 9"
+  ],
   "jest": {
     "roots": [
       "<rootDir>/src"
@@ -80,7 +94,7 @@
       "react-app"
     ]
   },
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "7.9.0",
     "@svgr/webpack": "4.3.3",
     "@testing-library/jest-dom": "^4.2.4",
@@ -96,6 +110,7 @@
     "camelcase": "^5.3.1",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "css-loader": "3.4.2",
+    "cssnano-preset-advanced": "^4.0.7",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
     "eslint": "^6.6.0",
@@ -109,6 +124,7 @@
     "file-loader": "4.3.0",
     "fs-extra": "^8.1.0",
     "html-webpack-plugin": "4.0.0-beta.11",
+    "http-proxy-middleware": "^1.0.4",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.9.0",
     "jest-environment-jsdom-fourteen": "1.0.1",
@@ -118,14 +134,15 @@
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "pnp-webpack-plugin": "1.6.4",
     "postcss-flexbugs-fixes": "4.1.0",
+    "postcss-import": "^12.0.1",
     "postcss-loader": "3.0.0",
     "postcss-normalize": "8.0.1",
     "postcss-preset-env": "6.7.0",
     "postcss-safe-parser": "4.0.1",
-    "react": "^16.13.1",
+    "postcss-url": "^8.0.0",
     "react-app-polyfill": "^1.0.6",
     "react-dev-utils": "^10.2.1",
-    "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.12.21",
     "resolve": "1.15.0",
     "resolve-url-loader": "3.1.1",
     "sass-loader": "8.0.2",

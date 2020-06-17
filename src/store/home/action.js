@@ -1,23 +1,15 @@
 import * as home from './action-type';
 
-// 保存表单数据
-export const saveFormData = (value, datatype) => {
+// 保存列表数据
+export const saveList = list => {
   return {
-    type: home.SAVEFORMDATA,
-    value,
-    datatype,
+    type: home.SAVELIST,
+    list
   }
 }
 
-// 保存图片地址
-export const saveImg = path => {
-  return {
-    type: home.SAVEIMG,
-    path,
-  }
-}
 
-// 保存图片地址
+// 请客数据
 export const clearData = () => {
   return {
     type: home.CLEARDATA,

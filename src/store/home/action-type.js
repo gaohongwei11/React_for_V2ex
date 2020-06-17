@@ -1,6 +1,4 @@
-// 保存表单数据
-export const SAVEFORMDATA = 'SAVEFORMDATA';
-// 保存图片
-export const SAVEIMG = 'SAVEIMG';
+// 保存列表数据
+export const SAVELIST = 'SAVELIST';
 // 清空数据
 export const CLEARDATA = 'CLEARDATA';

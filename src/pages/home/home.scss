@@ -1,0 +1,19 @@
+@import "~@/style/mixin.scss";
+
+.home-container{
+    height: 100vh;
+    background-color: #eee;
+    padding-top: 88px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    padding: 88px;
+    .test{
+        border: 0.5px solid tomato;
+        margin-bottom: 80px;
+    }
+    .box{
+        border: 1px solid transparent;
+        border-image: svg(1px-border param(--color #00b1ff)) 2 2 stretch;
+    }
+}

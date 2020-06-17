@@ -54,6 +54,11 @@ li{
 html,body{
   height: 100%;
 }
+/* 在img中content会引起部分浏览器下，图片不会显示。这个时候需要全局添加： */
+img {
+  content: normal !important;
+}
+
 .common-con-top{
   margin-top: 88px;
 }
