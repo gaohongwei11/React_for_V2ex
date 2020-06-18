@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {Component} from 'react'
 import API from '@/api/api';
 import { connect } from 'react-redux';
 import { saveList, clearData } from '@/store/home/action';
 // import PropTypes from 'prop-types';
 import './home.scss';
+import { Button } from 'antd-mobile';
 
-class Home extends React.Component {
+class Home extends Component {
   // constructor(props) {
   //   super(props);
   //   this.state = {
@@ -46,9 +47,12 @@ class Home extends React.Component {
 
   render() {
     return (
-    <div className="home-container" onClick={this.goList}>
+    <div className="home-container">
+      <Button type="ghost" inline size="small" style={{ marginRight: '4px' }}>ghost</Button>
+      <Button type="primary" inline size="small" style={{ marginRight: '4px' }} onClick={this.goList}>primary</Button>
       <div className="test">Home-{this.state.count}</div>
       <div className="box">123</div>
+      {/* <Button></Button> */}
     </div>
     )
   }

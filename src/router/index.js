@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import asyncComponent from '@/utils/asyncComponent';
 
-import home from "@/pages/home/home";
+// import home from "@/pages/home/home";
+const home = asyncComponent(() => import("@/pages/home/home"));
 const detail = asyncComponent(() => import("@/pages/detail"));
 const list = asyncComponent(() => import("@/pages/list"));
 
