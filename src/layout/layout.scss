@@ -1,0 +1,25 @@
+@import "~@/style/mixin.scss";
+
+.home-container{
+    background-color: #eee;
+    .nav-bar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+    }
+    .test{
+        border: 0.5px solid red;
+        margin-bottom: 80px;
+        display: flex;
+        align-items: center;
+    }
+    .box{
+        border: 0;
+        border: 1px solid;
+        border-radius: 20px;
+        // border-image: svg(border3 param(--color red)) 2 2 stretch;
+        border-image: svg(border3 param(--color red)) 1 stretch;
+    }
+}
