@@ -60,11 +60,27 @@ img {
 }
 
 .common-con-top{
-  margin-top: 88px;
+  padding-top: 45px;
+}
+.common-con-bottom{
+  padding-bottom: 50px;
 }
 
 .ellipsis{
   overflow:hidden;
   text-overflow:ellipsis;
   white-space:nowrap
+}
+
+.fixed-nav-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.fixed-tab-bar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }

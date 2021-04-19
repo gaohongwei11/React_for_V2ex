@@ -1,13 +1,14 @@
 @import "~@/style/mixin.scss";
 
 .home-container{
-    height: 100vh;
     background-color: #eee;
-    padding-top: 88px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    padding: 88px;
+    .nav-bar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99;
+    }
     .test{
         border: 0.5px solid red;
         margin-bottom: 80px;
