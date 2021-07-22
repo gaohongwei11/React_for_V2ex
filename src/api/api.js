@@ -9,24 +9,9 @@ class API extends Server{
    *  @method get
    *  @return {promise}
    */
-  async getHot(params = {}){
-    try{
-      let result = await this.axios('get', '/api/topics/hot.json', params); 
-      console.log(result)
-      if(result || result.status === 1){
-        return result;
-      }else{
-        let err = {
-          tip: '获取最热主题失败',
-          response: result,
-          data: params,
-          url: '//www.v2ex.com/api/topics/hot.json',
-        }
-        throw err;
-      }
-    }catch(err){
-      throw err;
-    }
+  async getTopics(params = {}){
+    let result = await this.axios('get', '/topics', params); 
+    return result;
   }
 
   /**

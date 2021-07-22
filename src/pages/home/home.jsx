@@ -16,21 +16,16 @@ class Home extends Component {
   componentDidMount() {
     // console.log('componentDidMount')
     // console.log(this)
+    this.getTopics()
   }
-  getHot = async () => {
-    let result = await API.getHot({ t: 123456 });
+  getTopics = async () => {
+    let result = await API.getTopics({ t: 123456 });
     console.log(result)
     this.props.saveList(result);
     console.log(this)
   }
   goList = () => {
-    this.props.history.push({
-      pathname: '/list',
-      query: {
-        name: 1
-      },
-      search: "123"
-    })
+    this.props.history.push(`/list?name=1`)
   }
   render() {
     return (
@@ -39,7 +34,7 @@ class Home extends Component {
           <Item extra={'extra content'}>Title</Item>
         </List>
         <List renderHeader={() => 'Subtitle'} className="my-list">
-          <Item arrow="horizontal" multipleLine onClick={() => { 
+          <Item arrow="horizontal" multipleLine onClick={() => {
             this.props.history.push({
               pathname: '/friend'
             })

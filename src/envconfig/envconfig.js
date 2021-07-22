@@ -4,9 +4,9 @@
 let baseURL; 
 let imgUrl = '//www.v2ex.com';
 if(process.env.NODE_ENV === 'development'){
-  baseURL = '/';
+  baseURL = '/api';
 }else{
-  baseURL = '//www.v2ex.com';
+  baseURL = 'https://cnodejs.org/api/v1';
 }
 
 

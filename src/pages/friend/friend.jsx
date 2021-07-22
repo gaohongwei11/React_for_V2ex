@@ -22,6 +22,7 @@ class Home extends Component {
         <p>friend</p>
         <p>friend</p>
         <p>friend</p>
+        <a href="alipays://">打开支付宝</a>
       </div>
     )
   }

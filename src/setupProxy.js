@@ -3,17 +3,11 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
 module.exports = function (app) {
     app.use(
         createProxyMiddleware('/api', {
-            target: 'https://www.v2ex.com',
+            target: 'https://cnodejs.org',
             changeOrigin: true,
             pathRewrite: {
-            '^/api': '/api',
+            '^/api': '/api/v1',
             }
-        })
-    )
-    app.use(
-        createProxyMiddleware('/v2ex', {
-            target: 'https://www.v2ex.com',
-            changeOrigin: true
         })
     )
 }

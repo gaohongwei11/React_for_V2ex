@@ -39,15 +39,16 @@ class RouteConfig extends Component{
     console.log(otherRoutes)
     return(
       <BrowserRouter>
-        <Switch>
-          <Layout>
+        <Layout>
+          <Switch>
             {
               routes.map(route => {
                 return <Route key={route.path} isTab={route.tab} path= {route.path} exact component={route.component} />
               })
             }
-          </Layout>
-        </Switch>
+            <Redirect to="/home" />
+          </Switch>
+        </Layout>
       </BrowserRouter>
     )
   }

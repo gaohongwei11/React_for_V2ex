@@ -42,46 +42,43 @@ class Layout extends Component {
   componentDidMount() {
     console.log('componentDidMount')
     console.log(this)
-    this.setData(this.props.location)
+    // this.setData(this.props.location)
     // UNLISTEN变量用来接收解绑函数
     UNLISTEN = this.props.history.listen((route) => {
-      console.log(route)
       this.setData(route)
     })
   }
-  setData(route){
+  setData(route) {
     let hidden = true
     this.state.tab.map(item => {
-      if(item.key === route.pathname){
+      if (item.key === route.pathname) {
         hidden = false
         this.changeTab(item)
       }
     })
-    console.log(hidden)
     this.setState({
       hidden: hidden,
     });
   }
-  componentWillUnmount(){
+  componentWillUnmount() {
     UNLISTEN && UNLISTEN(); // 执行解绑
   }
   onLeftClick = () => {
     this.props.history.goBack()
   }
   changeTab = (tab) => {
-    console.log(tab)
     let arr = this.state.tab
     arr.map(item => {
-      if(item.key === tab.key){
+      if (item.key === tab.key) {
         item.selected = true
-      }else{
+      } else {
         item.selected = false
       }
     })
     this.setState({
       tab: arr,
     });
-    
+
   }
   render() {
     return (
@@ -126,7 +123,7 @@ class Layout extends Component {
                   />
                   }
                   selected={item.selected}
-                  onPress={() => {this.props.history.push({ pathname: `${item.key}` })}}
+                  onPress={() => { this.props.history.push({ pathname: `${item.key}` }) }}
                 >
                 </TabBar.Item>
               )
